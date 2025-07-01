@@ -75,7 +75,7 @@
             border: none;
             cursor: pointer;
             font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para hover */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* TransiciÃ³n para hover */
         }
 
         .btn:hover {
@@ -100,7 +100,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: none; /* Oculto por defecto, se muestra con JS después del login */
+            display: none; /* Oculto por defecto, se muestra con JS despuÃ©s del login */
         }
 
         .navbar .container {
@@ -150,19 +150,19 @@
 
         /* Secciones de Contenido Individuales */
         .content-section {
-            display: none; /* Todas las secciones de contenido están ocultas por defecto */
+            display: none; /* Todas las secciones de contenido estÃ¡n ocultas por defecto */
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
         .content-section.active {
-            display: block; /* Solo la sección activa es visible */
+            display: block; /* Solo la secciÃ³n activa es visible */
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Estilos específicos para cada sección (Inicio, Nosotros, Servicios, etc.) */
-        /* Hero Section (Ahora la sección "Inicio" en el contenido logueado) */
+        /* Estilos especÃ­ficos para cada secciÃ³n (Inicio, Nosotros, Servicios, etc.) */
+        /* Hero Section (Ahora la secciÃ³n "Inicio" en el contenido logueado) */
         #home-section {
             background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
             color: var(--white-color);
@@ -171,7 +171,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 80vh; /* Asegura una altura mínima */
+            min-height: 80vh; /* Asegura una altura mÃ­nima */
             position: relative;
         }
 
@@ -191,7 +191,8 @@
 
         /* Resto de secciones (Nosotros, Servicios, Portafolio, Jobs, CV, Contacto)
            mantienen sus estilos, pero ahora son `.content-section` que se muestran/ocultan.
-           Solo se muestran cuando se les añade la clase 'active'. */
+           Solo se muestran cuando se les aÃ±ade la clase 'active'.
+        */
 
         #about-section { background: var(--white-color); text-align: center; }
         #about-section .about-content { display: flex; flex-direction: column; align-items: center; }
@@ -214,10 +215,42 @@
         box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
         .portfolio-card .card-img { width: 100%; height: 250px;
         object-fit: cover; display: block; }
-        .portfolio-card .card-content { padding: 1.5rem;
-        }
+        .portfolio-card .card-content { padding: 1.5rem; }
         .portfolio-card .card-content h3 { font-size: 1.6em; margin-bottom: 0.8rem; }
         .portfolio-card .card-content p { font-size: 1em; margin-bottom: 1rem; }
+
+        /* Estilos para el contenido de los detalles del proyecto en el modal */
+        .portfolio-detail-content {
+            padding: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin: auto;
+            background-color: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .portfolio-detail-content h3 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .portfolio-detail-content p {
+            color: var(--dark-color);
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        .portfolio-detail-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        .portfolio-detail-content ul li {
+            margin-bottom: 5px;
+        }
+
 
         #jobs-section { background: var(--light-color); text-align: center; }
         .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
@@ -249,7 +282,7 @@
         #contact-section .contact-item a:hover { color: var(--accent-color); }
 
 
-        /* Sección de Registro/Login (Modal al inicio) */
+        /* SecciÃ³n de Registro/Login (Modal al inicio) */
         #welcome-overlay {
             position: fixed;
             top: 0;
@@ -369,7 +402,7 @@
             text-align: center;
             padding: 2rem 0;
             border-top: 1px solid rgba(255,255,255,0.1);
-            display: none; /* Oculto por defecto, se muestra con JS después del login */
+            display: none; /* Oculto por defecto, se muestra con JS despuÃ©s del login */
         }
         .footer.visible {
             display: block;
@@ -387,7 +420,7 @@
             }
         }
 
-        /* Media Queries para Responsividad Básica */
+        /* Media Queries para Responsividad BÃ¡sica */
         @media (max-width: 768px) {
             .navbar .container {
                 flex-direction: column;
@@ -416,7 +449,7 @@
             }
 
             .service-grid, .portfolio-grid, .job-grid {
-                grid-template-columns: 1fr; /* Una columna en móviles */
+                grid-template-columns: 1fr; /* Una columna en mÃ³viles */
             }
 
             .portfolio-card .card-img {
@@ -445,26 +478,26 @@
     <div id="welcome-overlay">
         <div id="welcome-box">
             <h2 id="auth-title">Bienvenido a PRO ADMIN</h2>
-            <p id="auth-subtitle">Para acceder, por favor regístrate o inicia sesión.</p>
+            <p id="auth-subtitle">Para acceder, por favor regÃ­strate o inicia sesiÃ³n.</p>
             <form id="authForm">
                 <div class="form-group" id="name-group">
                     <label for="authName">Nombre Completo:</label>
                     <input type="text" id="authName" name="authName">
                 </div>
                 <div class="form-group">
-                    <label for="authEmail">Correo Electrónico:</label>
+                    <label for="authEmail">Correo ElectrÃ³nico:</label>
                     <input type="email" id="authEmail" name="authEmail" required>
                 </div>
                 <div class="form-group">
-                    <label for="authPassword">Contraseña:</label>
+                    <label for="authPassword">ContraseÃ±a:</label>
                     <input type="password" id="authPassword" name="authPassword" required minlength="6">
                 </div>
                 <button type="submit" class="btn btn-auth" id="authSubmitBtn">Registrarme</button>
                 <div id="authMessage" class="message"></div>
             </form>
             <div class="toggle-form">
-                ¿Ya tienes una cuenta?
-                <a href="#" id="toggleAuthMode">Inicia Sesión aquí.</a>
+                Â¿Ya tienes una cuenta?
+                <a href="#" id="toggleAuthMode">Inicia SesiÃ³n aquÃ­.</a>
             </div>
         </div>
     </div>
@@ -482,7 +515,7 @@
                         <li><a href="#" data-section="jobs-section">Trabajos</a></li>
                         <li><a href="#" data-section="cv-guide-section">Tu CV</a></li>
                         <li><a href="#" data-section="contact-section">Contacto</a></li>
-                        <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
+                        <li><a href="#" id="logoutBtn">Cerrar SesiÃ³n</a></li>
                     </ul>
                 </div>
             </nav>
@@ -491,8 +524,8 @@
         <main id="main-content">
             <section id="home-section" class="section-padding content-section">
                 <div class="container">
-                    <h1>Tu Impulso Profesional Empieza Aquí</h1>
-                    <p>Ofrecemos soluciones innovadoras para potenciar tu carrera y negocio. ¡Descubre cómo podemos ayudarte a alcanzar tus metas!</p>
+                    <h1>Tu Impulso Profesional Empieza AquÃ­</h1>
+                    <p>Ofrecemos soluciones innovadoras para potenciar tu carrera y negocio. Â¡Descubre cÃ³mo podemos ayudarte a alcanzar tus metas!</p>
                     <a href="#" class="btn" data-section="services-section">Explora Nuestros Servicios</a>
                 </div>
             </section>
@@ -503,510 +536,5 @@
                     <div class="about-content">
                         <img src="https://via.placeholder.com/350x300?text=Imagen+Sobre+Nosotros" alt="Equipo de PRO ADMIN" class="about-img">
                         <div class="about-text">
-                            <p>En PRO ADMIN, somos un equipo apasionado conformado por Joaquín, Domenika, Víctor y Una Puta Prostituta lo peor que cobra 1 sol (Madeley), dedicados a transformar ideas en realidades. Con años de experiencia en el sector, nos especializamos en brindar asesoría y herramientas personalizadas para individuos y y empresas que buscan crecer en un mercado competitivo.</p>
-                            <p>Nuestra misión es empoderarte, ofreciéndote soluciones estratégicas y soporte continuo para que superes tus desafíos y alcances el éxito. Creemos en el trabajo colaborativo, la innovación constante y la excelencia en cada proyecto.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="services-section" class="section-padding content-section">
-                <div class="container">
-                    <h2 class="text-center">Nuestros Servicios</h2>
-                    <p class="text-center">Diseñados para impulsarte hacia el éxito.</p>
-                    <div class="service-grid">
-                        <div class="service-item">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Consultoría Estratégica</h3>
-                            <p>Asesoramiento experto para definir y ejecutar tus objetivos de negocio.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-code"></i>
-                            <h3>Desarrollo Web</h3>
-                            <p>Creación de sitios web modernos, responsivos y optimizados para tu presencia online.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-bullhorn"></i>
-                            <h3>Marketing Digital</h3>
-                            <p>Estrategias de SEO, SEM y redes sociales para aumentar tu visibilidad.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-paint-brush"></i>
-                            <h3>Diseño Gráfico</h3>
-                            <p>Creación de identidades visuales, logotipos y material de marketing impactante.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-users"></i>
-                            <h3>Capacitación y Workshops</h3>
-                            <p>Programas de formación para desarrollar nuevas habilidades y competencias.</p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-headset"></i>
-                            <h3>Soporte Técnico</h3>
-                            <p>Asistencia y mantenimiento para asegurar el correcto funcionamiento de tus sistemas.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio-section" class="section-padding content-section">
-                <div class="container">
-                    <h2 class="text-center">Nuestro Portafolio</h2>
-                    <p class="text-center">Proyectos exitosos que demuestran nuestro compromiso y calidad.</p>
-                    <div class="portfolio-grid">
-                        <div class="portfolio-card">
-                            <a href="https://via.placeholder.com/800x600?text=Proyecto+Web+Corporativo+Ampliado" data-featherlight="image">
-                                <img src="https://via.placeholder.com/400x250?text=Proyecto+Web+Corporativo" alt="Proyecto 1" class="card-img">
-                            </a>
-                            <div class="card-content">
-                                <h3>Sitio Web Corporativo</h3>
-                                <p>Desarrollo de una plataforma interactiva para una empresa líder en su sector.</p>
-                                <a href="#" class="btn btn-small">Detalles</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card">
-                            <a href="https://via.placeholder.com/800x600?text=App+Movil+E-commerce+Ampliada" data-featherlight="image">
-                                <img src="https://via.placeholder.com/400x250?text=App+Movil+E-commerce" alt="Proyecto 2" class="card-img">
-                            </a>
-                            <div class="card-content">
-                                <h3>Aplicación Móvil E-commerce</h3>
-                                <p>Diseño y desarrollo de una aplicación intuitiva para ventas en línea.</p>
-                                <a href="#" class="btn btn-small">Detalles</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card">
-                            <a href="https://via.placeholder.com/800x600?text=Campania+Marketing+Digital+Ampliada" data-featherlight="image">
-                                <img src="https://via.placeholder.com/400x250?text=Campania+Marketing+Digital" alt="Proyecto 3" class="card-img">
-                            </a>
-                            <div class="card-content">
-                                <h3>Campaña de Marketing Digital</h3>
-                                <p>Estrategia integral de SEO y SEM con resultados comprobados.</p>
-                                <a href="#" class="btn btn-small">Detalles</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card">
-                            <a href="https://via.placeholder.com/800x600?text=Branding+Empresarial+Ampliado" data-featherlight="image">
-                                <img src="https://via.placeholder.com/400x250?text=Branding+Empresarial" alt="Proyecto 4" class="card-img">
-                            </a>
-                            <div class="card-content">
-                                <h3>Branding Empresarial Completo</h3>
-                                <p>Creación de identidad visual y manual de marca para startup.</p>
-                                <a href="#" class="btn btn-small">Detalles</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="jobs-section" class="section-padding content-section">
-                <div class="container">
-                    <h2 class="text-center">Oportunidades Laborales en Perú</h2>
-                    <p class="text-center">Descubre posibles caminos profesionales y estima tus ingresos.</p>
-                    <div class="job-grid">
-                        <div class="job-card">
-                            <h3>Ingeniero de Software Senior</h3>
-                            <p><span class="info-label">Empresa:</span> Tech Innova Solutions</p>
-                            <p><span class="info-label">Ubicación:</span> Lima, Perú</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 5,000 - S/ 10,000 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> Indefinido</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Desarrollo y mantenimiento de aplicaciones web escalables.</li>
-                                <li>Colaboración en equipos ágiles.</li>
-                                <li>Experiencia en frameworks como React o Angular.</li>
-                            </ul>
-                        </div>
-                        <div class="job-card">
-                            <h3>Especialista en Marketing Digital</h3>
-                            <p><span class="info-label">Empresa:</span> Agencia Marketing Pro</p>
-                            <p><span class="info-label">Ubicación:</span> Arequipa, Perú</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 2,500 - S/ 4,500 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> A plazo fijo (1 año con opción a renovación)</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Gestión de campañas publicitarias en redes sociales y Google Ads.</li>
-                                <li>Análisis de métricas y elaboración de reportes.</li>
-                                <li>Creación de contenido digital persuasivo.</li>
-                            </ul>
-                        </div>
-                        <div class="job-card">
-                            <h3>Diseñador Gráfico Junior</h3>
-                            <p><span class="info-label">Empresa:</span> Creativos Andinos</p>
-                            <p><span class="info-label">Ubicación:</span> Cusco, Perú</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 1,800 - S/ 2,800 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> Part-time (25 horas/semana), indefinido</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Diseño de logotipos, folletos y material publicitario.</li>
-                                <li>Colaboración en proyectos de branding.</li>
-                                <li>Manejo de herramientas Adobe Creative Suite.</li>
-                            </ul>
-                        </div>
-                        <div class="job-card">
-                            <h3>Analista de Datos</h3>
-                            <p><span class="info-label">Empresa:</span> Data Insights Corp</p>
-                            <p><span class="info-label">Ubicación:</span> Lima, Perú (Remoto posible)</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 4,000 - S/ 7,000 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> Indefinido</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Recolección, limpieza y análisis de grandes volúmenes de datos.</li>
-                                <li>Creación de dashboards e informes con Power BI o Tableau.</li>
-                                <li>Conocimiento de SQL y Python/R.</li>
-                            </ul>
-                        </div>
-                        <div class="job-card">
-                            <h3>Administrador de Redes y Sistemas</h3>
-                            <p><span class="info-label">Empresa:</span> Soluciones IT Perú</p>
-                            <p><span class="info-label">Ubicación:</span> Callao, Perú</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 3,000 - S/ 5,500 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> Indefinido</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Mantenimiento de infraestructura de red y servidores.</li>
-                                <li>Soporte técnico a usuarios internos.</li>
-                                <li>Experiencia con sistemas operativos Linux y Windows Server.</li>
-                            </ul>
-                        </div>
-                        <div class="job-card">
-                            <h3>Contador Junior</h3>
-                            <p><span class="info-label">Empresa:</span> Asesoría Contable Norte</p>
-                            <p><span class="info-label">Ubicación:</span> Trujillo, Perú</p>
-                            <p><span class="info-label">Salario Estimado:</span> S/ 1,800 - S/ 2,700 PEN/mes</p>
-                            <p><span class="info-label">Tipo de Contrato:</span> A plazo fijo (6 meses iniciales)</p>
-                            <p>Descripción:</p>
-                            <ul>
-                                <li>Registro de operaciones contables.</li>
-                                <li>Elaboración de conciliaciones bancarias.</li>
-                                <li>Apoyo en la preparación de estados financieros.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="text-center" style="margin-top: 3rem; font-size: 0.9em;">*Los salarios son estimaciones y pueden variar según la experiencia, la empresa y la negociación.</p>
-                </div>
-            </section>
-
-            <section id="cv-guide-section" class="section-padding content-section">
-                <div class="container">
-                    <h2 class="text-center">Guía Detallada para Crear tu Currículum Vitae (CV)</h2>
-                    <p class="text-center">Un buen CV es tu primera impresión. Aprende a crear uno que destaque.</p>
-                    <div class="guide-content">
-                        <h3>1. Estructura Básica de un CV Exitoso:</h3>
-                        <ol>
-                            <li>
-                                <strong>Datos Personales y de Contacto:</strong>
-                                <ul>
-                                    <li>Nombre completo y claro.</li>
-                                    <li>Número de teléfono (con código de país si es necesario).</li>
-                                    <li>Correo electrónico profesional.</li>
-                                    <li>Enlace a tu perfil de LinkedIn (muy recomendado).</li>
-                                    <li>Opcional: Enlace a portafolio online o GitHub si aplica a tu carrera.</li>
-                                    <li>NO incluyas: Estado civil, número de hijos, DNI (a menos que lo pidan explícitamente), foto (a menos que sea una práctica estándar en tu industria).</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Perfil Profesional / Resumen (Opcional pero recomendado):</strong>
-                                <ul>
-                                    <li>Un párrafo conciso (3-5 líneas) que resuma tu experiencia, habilidades clave y objetivos de carrera.</li>
-                                    <li>Adapta este resumen a la oferta de trabajo a la que postulas, usando palabras clave de la descripción del puesto.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Experiencia Profesional:</strong>
-                                <ul>
-                                    <li>Lista tus empleos en orden cronológico inverso (el más reciente primero).</li>
-                                    <li>Para cada puesto, incluye:
-                                        <ul>
-                                            <li>Nombre del puesto.</li>
-                                            <li>Nombre de la empresa.</li>
-                                            <li>Ciudad y País.</li>
-                                            <li>Fechas de inicio y fin (mes/año).</li>
-                                        </ul>
-                                    <li>Utiliza viñetas para describir tus responsabilidades y, lo más importante, ¡tus LOGROS! Cuantifica tus logros siempre que sea posible (ej. "Aumenté las ventas en un 15%", "Reduje costos operativos en S/10,000").</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Formación Académica:</strong>
-                                <ul>
-                                    <li>Lista tus grados académicos en orden cronológico inverso.</li>
-                                    <li>Incluye:
-                                        <ul>
-                                            <li>Nombre del título (ej. Bachiller en Ingeniería de Sistemas).</li>
-                                            <li>Nombre de la universidad o institución.</li>
-                                            <li>Ciudad y País.</li>
-                                            <li>Fechas de inicio y fin (o fecha de graduación).</li>
-                                        </ul>
-                                    <li>Puedes incluir reconocimientos, becas o proyectos relevantes.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Habilidades:</strong>
-                                <ul>
-                                    <li>Divide las habilidades en categorías:
-                                        <ul>
-                                            <li>**Habilidades Técnicas (Hard Skills):** Software, lenguajes de programación, idiomas, herramientas específicas (ej. Microsoft Excel, Python, SEO, Photoshop, SAP).</li>
-                                            <li>**Habilidades Blandas (Soft Skills):** Comunicación, trabajo en equipo, resolución de problemas, liderazgo, adaptabilidad, proactividad.</li>
-                                        </ul>
-                                    <li>Sé específico. En lugar de "Ofimática", pon "Microsoft Word, Excel (nivel avanzado), PowerPoint".</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Idiomas (Si Aplica):</strong>
-                                <ul>
-                                    <li>Menciona los idiomas que dominas y tu nivel (básico, intermedio, avanzado, nativo).</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Cursos y Certificaciones (Opcional):</strong>
-                                <ul>
-                                    <li>Cualquier curso relevante, taller o certificación que complemente tu perfil y sea pertinente para el puesto.</li>
-                                </ul>
-                            </li>
-                        </ol>
-
-                        <h3>2. Consejos Clave para un CV Impactante:</h3>
-                        <ul>
-                            <li><strong>Personaliza tu CV:</strong> Ajusta tu CV para cada oferta de trabajo. Resalta las habilidades y experiencias que son más relevantes para ese puesto específico. Usa palabras clave de la descripción del puesto.</li>
-                            <li><strong>Formato Limpio y Profesional:</strong>
-                                <ul>
-                                    <li>Utiliza una fuente legible (ej. Arial, Calibri, Poppins).</li>
-                                    <li>Mantén márgenes adecuados y un espaciado uniforme.</li>
-                                    <li>Usa negritas para títulos de secciones y puestos.</li>
-                                    <li>Sé consistente con el formato.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Sé Conciso:</strong> Lo ideal es un CV de 1 a 2 páginas para la mayoría de los profesionales. Los reclutadores dedican solo unos segundos a cada CV.</li>
-                            <li><strong>Errores Cero:</strong> Revisa y corrige cualquier error ortográfico o gramatical. Pide a alguien más que lo revise.</li>
-                            <li><strong>Palabras Clave:</strong> Muchos sistemas de reclutamiento (ATS) buscan palabras clave. Asegúrate de incluir las relevantes para tu industria y el puesto deseado.</li>
-                            <li><strong>Formato PDF:</strong> Siempre envía tu CV en formato PDF, a menos que se indique lo contrario. Esto asegura que el formato se mantenga intacto.</li>
-                            <li><strong>Actualiza Regularmente:</strong> Mantén tu CV al día, añadiendo nuevas experiencias, habilidades o logros.</li>
-                        </ul>
-                        <p style="margin-top: 2rem;">¡Un CV bien elaborado es tu boleto de entrada a la entrevista! Invierte tiempo en él y verás los resultados.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="contact-section" class="section-padding content-section">
-                <div class="container">
-                    <h2 class="text-center">Contáctanos</h2>
-                    <p class="text-center">Estamos listos para escuchar tus ideas y ayudarte a hacerlas realidad.</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Av. Principal 123, Ciudad del Éxito</p>
-                            <p>Perú</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <p><a href="tel:+51987654321">+51 987 654 321</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p><a href="mailto:info@proadmin.com">info@proadmin.com</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <p><a href="https://wa.me/51987654321" target="_blank">Envíanos un WhatsApp</a></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2024 PRO ADMIN. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-    </div>
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const welcomeOverlay = document.getElementById('welcome-overlay');
-            const authForm = document.getElementById('authForm');
-            const authTitle = document.getElementById('auth-title');
-            const authSubtitle = document.getElementById('auth-subtitle');
-            const authSubmitBtn = document.getElementById('authSubmitBtn');
-            const authMessage = document.getElementById('authMessage');
-            const toggleAuthModeLink = document.getElementById('toggleAuthMode');
-            const nameGroup = document.getElementById('name-group');
-
-            const mainWrapper = document.getElementById('main-wrapper');
-            const navbar = document.querySelector('.navbar');
-            const footer = document.querySelector('.footer');
-            const logoutBtn = document.getElementById('logoutBtn');
-            const navLinks = document.querySelectorAll('.nav-links a[data-section]');
-            const contentSections = document.querySelectorAll('.content-section');
-
-            let isRegisterMode = true; // Empieza en modo registro
-
-            // Función para mostrar una sección específica y ocultar las demás
-            function showSection(sectionId) {
-                contentSections.forEach(section => {
-                    if (section.id === sectionId) {
-                        section.classList.add('active');
-                        section.style.animation = 'fadeInSlideUp 1s ease-out forwards'; // Animación al mostrar
-                    } else {
-                        section.classList.remove('active');
-                        section.style.animation = 'none'; // Quitar animación a las ocultas
-                    }
-                });
-            }
-
-            // Función para alternar entre registro y login
-            function toggleAuthUI(toRegisterMode) {
-                isRegisterMode = toRegisterMode;
-                if (isRegisterMode) {
-                    authTitle.textContent = 'Bienvenido a PRO ADMIN';
-                    authSubtitle.textContent = 'Para acceder, por favor regístrate o inicia sesión.';
-                    nameGroup.style.display = 'block'; // Mostrar campo de nombre
-                    authSubmitBtn.textContent = 'Registrarme';
-                    toggleAuthModeLink.textContent = 'Inicia Sesión aquí.';
-                } else {
-                    authTitle.textContent = '¡Bienvenido de Nuevo!';
-                    authSubtitle.textContent = 'Ingresa tus credenciales para continuar.';
-                    nameGroup.style.display = 'none'; // Ocultar campo de nombre
-                    authSubmitBtn.textContent = 'Iniciar Sesión';
-                    toggleAuthModeLink.textContent = 'Regístrate aquí.';
-                }
-                // Limpiar mensajes y campos
-                authMessage.style.display = 'none';
-                authMessage.textContent = '';
-                authForm.reset();
-            }
-
-            toggleAuthModeLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                toggleAuthUI(!isRegisterMode); // Alternar modo
-            });
-            // Lógica inicial al cargar la página
-            if (localStorage.getItem('userLoggedIn') === 'true') {
-                // Si ya está logueado, ocultar el overlay
-                welcomeOverlay.classList.remove('visible');
-                // Mostrar el contenido principal de la aplicación
-                mainWrapper.classList.add('visible');
-                navbar.style.display = 'flex'; // Mostrar la navbar
-                footer.classList.add('visible'); // Mostrar el footer
-
-                // Mostrar la sección de inicio por defecto
-                showSection('home-section');
-            } else {
-                // Si no está logueado, mostrar el overlay
-                welcomeOverlay.classList.add('visible');
-                toggleAuthUI(true); // Inicializar la UI en modo registro por defecto
-            }
-
-            // Manejar el envío del formulario de autenticación
-            authForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const name = document.getElementById('authName').value.trim();
-                const email = document.getElementById('authEmail').value.trim();
-                const password = document.getElementById('authPassword').value.trim();
-
-                if (!isValidEmail(email)) {
-                    showMessage('Por favor, introduce un correo electrónico válido.', 'error');
-                    return;
-                }
-
-                if (password.length < 6) {
-                    showMessage('La contraseña debe tener al menos 6 caracteres.', 'error');
-                    return;
-                }
-
-                if (isRegisterMode) {
-                    // Simulación de registro
-                    if (name === '') {
-                        showMessage('Por favor, ingresa tu nombre.', 'error');
-                        return;
-                    }
-                    localStorage.setItem('userEmail', email);
-                    localStorage.setItem('userPassword', password); // NOTA: Nunca guardar contraseñas en localStorage en producción
-                    localStorage.setItem('userLoggedIn', 'true');
-                    showMessage('¡Registro exitoso! Redireccionando...', 'success');
-                    setTimeout(() => {
-                        welcomeOverlay.classList.remove('visible');
-                        mainWrapper.classList.add('visible');
-                        navbar.style.display = 'flex'; // Mostrar la navbar
-                        footer.classList.add('visible'); // Mostrar el footer
-                        showSection('home-section'); // Mostrar la sección de inicio después del login
-                    }, 1000);
-                } else {
-                    // Simulación de login
-                    const storedEmail = localStorage.getItem('userEmail');
-                    const storedPassword = localStorage.getItem('userPassword');
-
-                    if (email === storedEmail && password === storedPassword) {
-                        localStorage.setItem('userLoggedIn', 'true');
-                        showMessage('¡Inicio de sesión exitoso! Redireccionando...', 'success');
-                        setTimeout(() => {
-                            welcomeOverlay.classList.remove('visible');
-                            mainWrapper.classList.add('visible');
-                            navbar.style.display = 'flex'; // Mostrar la navbar
-                            footer.classList.add('visible'); // Mostrar el footer
-                            showSection('home-section'); // Mostrar la sección de inicio después del login
-                        }, 1000);
-                    } else {
-                        showMessage('Correo o contraseña incorrectos.', 'error');
-                    }
-                }
-            });
-            // Manejar clics en los enlaces de navegación para cambiar de sección
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.dataset.section;
-                    showSection(sectionId);
-                });
-            });
-            // Manejar clics en los botones dentro de las secciones que cambian a otra sección
-            const internalSectionBtns = document.querySelectorAll('.btn[data-section]');
-            internalSectionBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.dataset.section;
-                    showSection(sectionId);
-                });
-            });
-            // Botón de cerrar sesión
-            logoutBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                localStorage.removeItem('userLoggedIn');
-                localStorage.removeItem('userEmail');
-                localStorage.removeItem('userPassword');
-
-                mainWrapper.classList.remove('visible'); // Ocultar el contenido principal
-                navbar.style.display = 'none'; // Ocultar la navbar
-                footer.classList.remove('visible'); // Ocultar el footer
-
-                welcomeOverlay.classList.add('visible'); // Mostrar la pantalla de bienvenida/login
-                toggleAuthUI(true); // Regresar al modo registro por defecto
-
-                // Ocultar todas las secciones al cerrar sesión
-                contentSections.forEach(section => {
-                    section.classList.remove('active');
-                    section.style.animation = 'none';
-                    section.style.opacity = '0';
-                    section.style.transform = 'translateY(20px)';
-                });
-            });
-            function isValidEmail(email) {
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            }
-
-            function showMessage(msg, type) {
-                authMessage.textContent = msg;
-                authMessage.className = `message ${type}`;
-                authMessage.style.display = 'block';
-                setTimeout(() => {
-                    authMessage.style.display = 'none';
-                    authMessage.textContent = '';
-                }, 4000);
-            }
-        });
-    </script>
-</body>
-</html>
+                            <p>En PRO ADMIN, somos un equipo apasionado conformado por JoaquÃ­n, Domenika, VÃ­ctor y Madeley, dedicados a transformar ideas en realidades. Con aÃ±os de experiencia en el sector, nos especializamos en brindar asesorÃ­a y herramientas personalizadas para individuos y y empresas que buscan crecer en un mercado competitivo.</p>
+                            <p>Nuestra misiÃ³n es em
