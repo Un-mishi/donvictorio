@@ -75,7 +75,7 @@
             border: none;
             cursor: pointer;
             font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* TransiciÃ³n para hover */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para hover */
         }
 
         .btn:hover {
@@ -100,7 +100,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: none; /* Oculto por defecto, se muestra con JS despuÃ©s del login */
+            display: none; /* Oculto por defecto, se muestra con JS después del login */
         }
 
         .navbar .container {
@@ -150,19 +150,19 @@
 
         /* Secciones de Contenido Individuales */
         .content-section {
-            display: none; /* Todas las secciones de contenido estÃ¡n ocultas por defecto */
+            display: none; /* Todas las secciones de contenido están ocultas por defecto */
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
         .content-section.active {
-            display: block; /* Solo la secciÃ³n activa es visible */
+            display: block; /* Solo la sección activa es visible */
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Estilos especÃ­ficos para cada secciÃ³n (Inicio, Nosotros, Servicios, etc.) */
-        /* Hero Section (Ahora la secciÃ³n "Inicio" en el contenido logueado) */
+        /* Estilos específicos para cada sección (Inicio, Nosotros, Servicios, etc.) */
+        /* Hero Section (Ahora la sección "Inicio" en el contenido logueado) */
         #home-section {
             background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
             color: var(--white-color);
@@ -171,7 +171,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 80vh; /* Asegura una altura mÃ­nima */
+            min-height: 80vh; /* Asegura una altura mínima */
             position: relative;
         }
 
@@ -191,7 +191,7 @@
 
         /* Resto de secciones (Nosotros, Servicios, Portafolio, Jobs, CV, Contacto)
            mantienen sus estilos, pero ahora son `.content-section` que se muestran/ocultan.
-           Solo se muestran cuando se les aÃ±ade la clase 'active'.
+           Solo se muestran cuando se les añade la clase 'active'.
         */
 
         #about-section { background: var(--white-color); text-align: center; }
@@ -282,7 +282,7 @@
         #contact-section .contact-item a:hover { color: var(--accent-color); }
 
 
-        /* SecciÃ³n de Registro/Login (Modal al inicio) */
+        /* Sección de Registro/Login (Modal al inicio) */
         #welcome-overlay {
             position: fixed;
             top: 0;
@@ -402,7 +402,7 @@
             text-align: center;
             padding: 2rem 0;
             border-top: 1px solid rgba(255,255,255,0.1);
-            display: none; /* Oculto por defecto, se muestra con JS despuÃ©s del login */
+            display: none; /* Oculto por defecto, se muestra con JS después del login */
         }
         .footer.visible {
             display: block;
@@ -420,7 +420,7 @@
             }
         }
 
-        /* Media Queries para Responsividad BÃ¡sica */
+        /* Media Queries para Responsividad Básica */
         @media (max-width: 768px) {
             .navbar .container {
                 flex-direction: column;
@@ -449,7 +449,7 @@
             }
 
             .service-grid, .portfolio-grid, .job-grid {
-                grid-template-columns: 1fr; /* Una columna en mÃ³viles */
+                grid-template-columns: 1fr; /* Una columna en móviles */
             }
 
             .portfolio-card .card-img {
@@ -478,26 +478,26 @@
     <div id="welcome-overlay">
         <div id="welcome-box">
             <h2 id="auth-title">Bienvenido a PRO ADMIN</h2>
-            <p id="auth-subtitle">Para acceder, por favor regÃ­strate o inicia sesiÃ³n.</p>
+            <p id="auth-subtitle">Para acceder, por favor regístrate o inicia sesión.</p>
             <form id="authForm">
                 <div class="form-group" id="name-group">
                     <label for="authName">Nombre Completo:</label>
                     <input type="text" id="authName" name="authName">
                 </div>
                 <div class="form-group">
-                    <label for="authEmail">Correo ElectrÃ³nico:</label>
+                    <label for="authEmail">Correo Electrónico:</label>
                     <input type="email" id="authEmail" name="authEmail" required>
                 </div>
                 <div class="form-group">
-                    <label for="authPassword">ContraseÃ±a:</label>
+                    <label for="authPassword">Contraseña:</label>
                     <input type="password" id="authPassword" name="authPassword" required minlength="6">
                 </div>
                 <button type="submit" class="btn btn-auth" id="authSubmitBtn">Registrarme</button>
                 <div id="authMessage" class="message"></div>
             </form>
             <div class="toggle-form">
-                Â¿Ya tienes una cuenta?
-                <a href="#" id="toggleAuthMode">Inicia SesiÃ³n aquÃ­.</a>
+                ¿Ya tienes una cuenta?
+                <a href="#" id="toggleAuthMode">Inicia Sesión aquí.</a>
             </div>
         </div>
     </div>
@@ -515,7 +515,7 @@
                         <li><a href="#" data-section="jobs-section">Trabajos</a></li>
                         <li><a href="#" data-section="cv-guide-section">Tu CV</a></li>
                         <li><a href="#" data-section="contact-section">Contacto</a></li>
-                        <li><a href="#" id="logoutBtn">Cerrar SesiÃ³n</a></li>
+                        <li><a href="#" id="logoutBtn">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </nav>
@@ -524,8 +524,8 @@
         <main id="main-content">
             <section id="home-section" class="section-padding content-section">
                 <div class="container">
-                    <h1>Tu Impulso Profesional Empieza AquÃ­</h1>
-                    <p>Ofrecemos soluciones innovadoras para potenciar tu carrera y negocio. Â¡Descubre cÃ³mo podemos ayudarte a alcanzar tus metas!</p>
+                    <h1>Tu Impulso Profesional Empieza Aquí</h1>
+                    <p>Ofrecemos soluciones innovadoras para potenciar tu carrera y negocio. ¡Descubre cómo podemos ayudarte a alcanzar tus metas!</p>
                     <a href="#" class="btn" data-section="services-section">Explora Nuestros Servicios</a>
                 </div>
             </section>
@@ -536,5 +536,5 @@
                     <div class="about-content">
                         <img src="https://via.placeholder.com/350x300?text=Imagen+Sobre+Nosotros" alt="Equipo de PRO ADMIN" class="about-img">
                         <div class="about-text">
-                            <p>En PRO ADMIN, somos un equipo apasionado conformado por JoaquÃ­n, Domenika, VÃ­ctor y Madeley, dedicados a transformar ideas en realidades. Con aÃ±os de experiencia en el sector, nos especializamos en brindar asesorÃ­a y herramientas personalizadas para individuos y y empresas que buscan crecer en un mercado competitivo.</p>
-                            <p>Nuestra misiÃ³n es em
+                            <p>En PRO ADMIN, somos un equipo apasionado conformado por Joaquín, Domenika, Víctor y Madeley, dedicados a transformar ideas en realidades. Con años de experiencia en el sector, nos especializamos en brindar asesoría y herramientas personalizadas para individuos y y empresas que buscan crecer en un mercado competitivo.</p>
+                            <p>Nuestra misión es empoderarte, ofreciéndote soluc
